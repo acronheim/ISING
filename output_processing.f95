@@ -46,7 +46,7 @@ contains
     chi_s_err = std_err(chi_s_block, .true.)
 
     ! calculate binder cumulant
-    Q = 1 - sum(m_r**4/n_meas)/(3._dp*(sum(m_r**2)/n_meas)**2)
+    Q = 1 - sum((m_r/N)**4/n_meas)/(3._dp*(sum((m_r/N)**2)/n_meas)**2)
     deallocate(m_r)
   end subroutine
 
